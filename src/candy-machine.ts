@@ -93,7 +93,7 @@ export const awaitTransactionSignatureConfirmation = async (
       // eslint-disable-next-line no-loop-func
       (async () => {
         try {
-          const signatureStatuses = await connection.getSignatureStatuses([
+          const signatureStatuses =  connection.getSignatureStatuses([
             txid,
           ]);
           status = signatureStatuses && signatureStatuses.value[0];
